@@ -596,7 +596,7 @@ class NMGPipeline(DiffusionPipeline):
                     noise_pred_cond = noise_pred_uncond - (1 - alpha_prod_t).sqrt() * grad * grad_scale
                     noise_pred = noise_pred_uncond + guidance_noise_map * (noise_pred_cond - noise_pred_uncond)
                     latents_recon = self.scheduler.step(noise_pred, t, latents_recon, **extra_step_kwargs).prev_sample
-                    latents_recon = latents_uncond - grad * grad_scale
+                    latents_recon = latents_uncond + grad * grad_scale
                     latents = torch.cat([latents_recon, latents_target])
 
                 ### text condition ###
