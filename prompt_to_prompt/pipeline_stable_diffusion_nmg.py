@@ -589,7 +589,7 @@ class NMGPipeline(DiffusionPipeline):
                         loss = F.smooth_l1_loss(latents_uncond, latent_forward, beta=1e-4)
                     else:
                         raise NotImplementedError
-                    
+                    print(loss.item())
                     # perform noise map guidance  
                     grad = -torch.autograd.grad(loss, latent_model_input)[0]
                     alpha_prod_t = self.scheduler.alphas_cumprod[t]
