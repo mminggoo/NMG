@@ -1,4 +1,4 @@
-# [ICLR 2024] Nois Map Guidance: Inversion with Spatial Context for Real Image Editing
+# [ICLR 2024] Nois Map Guidance: Inversion with Spati   ting
 
 [![arXiv](https://img.shields.io/badge/arXiv-2402.04625-red)](https://arxiv.org/abs/2402.04625)
 
